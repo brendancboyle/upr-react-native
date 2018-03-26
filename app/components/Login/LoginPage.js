@@ -1,10 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, Button, View } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import Header from './Header';
+import Controls from './Controls';
 
 export default class LoginPage extends React.Component {
   static navigationOptions = {
-    title: 'UPR: Remote'
+    title: 'UPR: Remote',
+    headerStyle: {
+      backgroundColor: '#330033',
+    },
+    headerTintColor: '#fff',
   };
 
   addOne() {
@@ -15,13 +20,8 @@ export default class LoginPage extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>LoginPage: {this.props.Token}</Text>
-        <Button
-          title="Add 1"
-          onPress={() => {
-            this.addOne();
-          }}
-        />
+        <Header />
+        <Controls />
       </View>
     );
   }
@@ -30,8 +30,6 @@ export default class LoginPage extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    backgroundColor: '#fff'
   }
 });

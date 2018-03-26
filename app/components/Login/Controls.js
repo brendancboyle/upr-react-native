@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, Image, Button, View } from 'react-native';
+import { StyleSheet, Text, Image, View } from 'react-native';
+import Button from '../General/Button';
 
 export default class LoginPage extends React.Component {
   render() {
@@ -42,6 +43,6 @@ const styles = StyleSheet.create({
   },
   button: {
     margin: 15,
-    width: 200
+    width: 280
   }
 });

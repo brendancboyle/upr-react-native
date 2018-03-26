@@ -5,13 +5,14 @@ import Controls from './Controls';
 
 export default class LoginPage extends React.Component {
   static navigationOptions = {
-    title: 'UPR: Remote'
+    title: 'UPR: Remote',
+    headerRight: (
+      <Button
+        onPress={() => alert('This is a button!')}
+        title="Info"
+      />
+    ),
   };
-
-  addOne() {
-    const { TokenActions, Token } = this.props;
-    TokenActions.SetToken(Token + 1);
-  }
 
   render() {
     return (

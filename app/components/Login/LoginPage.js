@@ -1,15 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, Button, View } from 'react-native';
+import { StyleSheet, Text, Button, View, SafeAreaView, StatusBar } from 'react-native';
 import Header from './Header';
 import Controls from './Controls';
 
 export default class LoginPage extends React.Component {
   static navigationOptions = {
-    title: 'UPR: Remote',
-    headerStyle: {
-      backgroundColor: '#330033',
-    },
-    headerTintColor: '#fff',
+    title: 'UPR: Remote'
   };
 
   addOne() {
@@ -19,10 +15,11 @@ export default class LoginPage extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
+        <StatusBar barStyle="light-content" />
         <Header />
         <Controls />
-      </View>
+      </SafeAreaView>
     );
   }
 }

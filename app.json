@@ -2,6 +2,7 @@
   "expo": {
     "sdkVersion": "25.0.0",
     "slug": "upr-react-native",
-    "name": "upr-react-native"
+    "name": "upr-react-native",
+    "orientation": "portrait"
   }
 }

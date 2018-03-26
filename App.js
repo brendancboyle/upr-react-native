@@ -1,36 +1,27 @@
-import React from 'react';
-import { StyleSheet, Text, Button, View } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import React from "react";
+import { Provider, connect } from "react-redux";
+import { createStore, applyMiddleware, compose } from "redux";
+import { composeWithDevTools } from 'remote-redux-devtools';
+import AppNavigation from "./app/containers/AppNavigation";
+import RootReducer from "./app/reducers/Index";
 
-class App extends React.Component {
+const middleware = [];
+let store;
 
-  testFunction() {
-    console.log("Test")
-  }
+if (__DEV__) {
+  console.log('Debug mode!');
+  const composeEnhancers = composeWithDevTools({ realtime: true, hostname: '192.168.1.112', port: 8000 });
+  store = createStore(RootReducer, composeEnhancers(applyMiddleware(...middleware)));
+} else {
+  store = createStore(RootReducer, applyMiddleware(...middleware));
+}
 
+export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-        <Button title="Hello" onPress={this.testFunction} />
-      </View>
+      <Provider store={store}>
+        <AppNavigation />
+      </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
-export default StackNavigator({
-  Home: {
-    screen: App,
-  },
-});

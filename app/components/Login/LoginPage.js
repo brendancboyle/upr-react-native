@@ -1,8 +1,12 @@
-import React from "react";
-import { StyleSheet, Text, Button, View } from "react-native";
-import { StackNavigator } from "react-navigation";
+import React from 'react';
+import { StyleSheet, Text, Button, View } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 
 export default class LoginPage extends React.Component {
+  static navigationOptions = {
+    title: 'UPR: Remote'
+  };
+
   addOne() {
     const { TokenActions, Token } = this.props;
     TokenActions.SetToken(Token + 1);
@@ -26,8 +30,8 @@ export default class LoginPage extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 });

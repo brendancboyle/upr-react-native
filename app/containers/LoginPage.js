@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
-import { connect } from "react-redux";
-import LoginPage from "../components/Login/LoginPage";
-import * as TokenActions from "../actions/TokenActions";
+import { connect } from 'react-redux';
+import LoginPage from '../components/Login/LoginPage';
+import * as TokenActions from '../actions/TokenActions';
 
 function mapStateToProps(state) {
   return {
@@ -11,8 +11,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-      TokenActions: bindActionCreators(TokenActions, dispatch)
-  }
+    TokenActions: bindActionCreators(TokenActions, dispatch)
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);

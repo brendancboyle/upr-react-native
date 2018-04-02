@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   StyleSheet,
   Text,
+  Image,
   TouchableNativeFeedback,
   TouchableOpacity,
   Platform,
@@ -11,10 +12,25 @@ import {
 
 export default class Button extends React.Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    image: PropTypes.any,
     onPress: PropTypes.func.isRequired,
     disabled: PropTypes.bool
   };
+
+  getImage = () => {
+    const { image } = this.props;
+    if (image) {
+      return <Image source={image} style={styles.image} resizeMode="contain" />
+    }
+  }
+
+  getTitle = () => {
+    const { title } = this.props;
+    if (title) {
+      return <Text style={styles.buttonText}>{title}</Text>
+    }
+  }
 
   render() {
     const { title, onPress } = this.props;
@@ -22,7 +38,8 @@ export default class Button extends React.Component {
     return (
       <TouchableOpacity onPress={onPress}>
         <View style={styles.button}>
-          <Text style={styles.buttonText}>{title}</Text>
+          {this.getImage()}
+          {this.getTitle()}
         </View>
       </TouchableOpacity>
     );
@@ -31,12 +48,23 @@ export default class Button extends React.Component {
 
 const styles = StyleSheet.create({
   button: {
-    alignItems: 'center',
     backgroundColor: '#330033',
-    borderRadius: 5
+    borderRadius: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    minWidth: 56
   },
   buttonText: {
+    flex: 1,
     padding: 18,
-    color: 'white'
+    color: 'white',
+    textAlign: 'center'
+  },
+  image: {
+    position: 'absolute',
+    width: 40,
+    height: 40,
+    marginLeft: 8,
+    marginRight: 8
   }
 });

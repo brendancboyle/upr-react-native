@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-end',
     alignItems: 'center',
-    paddingBottom: 15
+    paddingBottom: 25
   },
   prompt: {
     fontSize: 18,

@@ -15,7 +15,8 @@ export default class Button extends React.Component {
     title: PropTypes.string,
     image: PropTypes.any,
     onPress: PropTypes.func.isRequired,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    style: PropTypes.any
   };
 
   getImage = () => {
@@ -33,11 +34,11 @@ export default class Button extends React.Component {
   }
 
   render() {
-    const { title, onPress } = this.props;
+    const { title, onPress, style } = this.props;
 
     return (
       <TouchableOpacity onPress={onPress}>
-        <View style={styles.button}>
+        <View style={[styles.button, style]}>
           {this.getImage()}
           {this.getTitle()}
         </View>

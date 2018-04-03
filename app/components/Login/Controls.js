@@ -8,15 +8,14 @@ export default class LoginPage extends React.Component {
       <View style={styles.container}>
         <Text style={styles.token}>123456</Text>
         <Text style={styles.prompt}>Enter token on presenting device</Text>
-        <View style={styles.button}>
-          <Button
+        <Button
             title="Waiting..."
             onPress={() => {
               console.log('Pressed!');
             }}
             color="#CCCCCC"
+            style={styles.button}
           />
-        </View>
       </View>
     );
   }

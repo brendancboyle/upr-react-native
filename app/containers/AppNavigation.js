@@ -2,6 +2,8 @@ import React from 'react';
 import { StackNavigator } from 'react-navigation';
 import LoginPage from './LoginPage';
 import Instruction1 from '../components/Instructions/Instruction1';
+import Instruction2 from '../components/Instructions/Instruction2';
+import Instruction3 from '../components/Instructions/Instruction3';
 
 const LoginNavigator = StackNavigator(
   {
@@ -19,6 +21,12 @@ const InstructionNavigator = StackNavigator(
   {
     Instruction1: {
       screen: Instruction1
+    },
+    Instruction2: {
+      screen: Instruction2
+    },
+    Instruction3: {
+      screen: Instruction3
     }
   },
   {

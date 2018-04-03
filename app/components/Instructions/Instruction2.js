@@ -11,9 +11,9 @@ export default class Instruction1 extends React.Component {
   render() {
     return (
       <InstructionPage 
-      text="Hello World"
+      text="Hello World 2"
       image={InfoIcon}
-      next="Instruction2"
+      next="Instruction3"
       navigation={this.props.navigation}
       />
     );

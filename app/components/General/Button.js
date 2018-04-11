@@ -17,25 +17,29 @@ export default class Button extends React.Component {
     onPress: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
     style: PropTypes.any,
-    isHeader: PropTypes.bool
+    isHeader: PropTypes.bool,
+    isHeaderBack: PropTypes.bool
   };
 
   getIcon = () => {
-    const { icon } = this.props;
+    const { icon, isHeaderBack } = this.props;
+    let size = 28;
+    if (isHeaderBack) size = 32;
     if (icon) {
-      return <Icon name={icon} size={28} color="#FFF" />;
+      return <Icon name={icon} size={size} color="#FFF" />;
     }
   };
 
   getTitle = () => {
-    const { title, icon } = this.props;
+    const { title, icon, isHeaderBack } = this.props;
     if (title) {
       return (
         <View style={styles.container}>
           {this.getIcon()}
           <Text
             style={[
-              styles.buttonText
+              styles.buttonText,
+              isHeaderBack ? styles.headerBackText : undefined
             ]}
           >
             {title}
@@ -43,20 +47,25 @@ export default class Button extends React.Component {
         </View>
       );
     } else if (icon) {
-      return (
-        <View style={styles.container}>
-          {this.getIcon()}
-        </View>
-      );
+      return <View style={styles.container}>{this.getIcon()}</View>;
     }
   };
 
   render() {
-    const { title, onPress, style, isHeader } = this.props;
+    const { title, onPress, style, isHeader, isHeaderBack } = this.props;
 
     return (
       <TouchableOpacity onPress={onPress}>
-        <View style={[styles.button, isHeader ? styles.header : undefined, style]}>{this.getTitle()}</View>
+        <View
+          style={[
+            styles.button,
+            isHeader ? styles.header : undefined,
+            isHeaderBack ? styles.headerBack : undefined,
+            style
+          ]}
+        >
+          {this.getTitle()}
+        </View>
       </TouchableOpacity>
     );
   }
@@ -64,7 +73,7 @@ export default class Button extends React.Component {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#330033',
+    backgroundColor: '#B30298',
     borderRadius: 5,
     flexDirection: 'row',
     alignItems: 'center',
@@ -73,7 +82,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     paddingLeft: 4,
-    color: 'white',
+    color: 'white'
   },
   container: {
     flex: 1,
@@ -84,6 +93,15 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: 'transparent',
     marginRight: 7,
-    marginLeft: 7,
+    marginLeft: 7
+  },
+  headerBack: {
+    backgroundColor: 'transparent'
+  },
+  headerBackText: {
+    paddingLeft: 0,
+    fontSize: 18,
+    position: 'relative',
+    right: 5
   }
 });

@@ -21,7 +21,7 @@ export default class ImagePanel extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    height: 200,
+    height: 160,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

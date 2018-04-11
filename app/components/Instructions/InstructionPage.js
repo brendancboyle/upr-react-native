@@ -39,8 +39,8 @@ export default class InstructionPage extends React.Component {
       <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
         <ImagePanel image={image} />
-        <ScrollView style={styles.text}>
-          <Text>{text}</Text>
+        <ScrollView style={styles.textScrollContainer}>
+          <Text style={styles.text}>{text}</Text>
         </ScrollView>
         <Button
           title={this.getTitle()}
@@ -58,12 +58,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#fff'
   },
-  text: {
+  textScrollContainer: {
     flex: 1,
     padding: 15
   },
+  text: {
+  },
   button: {
     margin: 15,
-    width: 280
+    width: 280,
+    height: 50,
+    marginBottom: 25
   }
 });

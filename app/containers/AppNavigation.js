@@ -49,7 +49,7 @@ export default StackNavigator(
     mode: 'modal',
     navigationOptions: {
       headerStyle: {
-        backgroundColor: '#330033'
+        backgroundColor: '#4b2c4f'
       },
       headerTintColor: '#fff'
     }

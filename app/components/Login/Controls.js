@@ -14,7 +14,6 @@ export default class LoginPage extends React.Component {
               console.log('Pressed!');
             }}
             color="#CCCCCC"
-            icon="info"
             style={styles.button}
           />
       </View>

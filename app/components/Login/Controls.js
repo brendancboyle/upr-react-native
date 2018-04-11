@@ -14,6 +14,7 @@ export default class LoginPage extends React.Component {
               console.log('Pressed!');
             }}
             color="#CCCCCC"
+            icon="info"
             style={styles.button}
           />
       </View>
@@ -42,6 +43,7 @@ const styles = StyleSheet.create({
   },
   button: {
     margin: 15,
-    width: 280
+    width: 280,
+    height: 50
   }
 });

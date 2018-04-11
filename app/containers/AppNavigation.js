@@ -37,15 +37,15 @@ const InstructionNavigator = StackNavigator(
 
 export default StackNavigator(
   {
-    Login: {
+    LoginStack: {
       screen: LoginNavigator,
     },
-    Instructions: {
+    InstructionStack: {
       screen: InstructionNavigator
     }
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'LoginStack',
     mode: 'modal',
     navigationOptions: {
       headerStyle: {

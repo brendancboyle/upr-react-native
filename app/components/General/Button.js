@@ -3,45 +3,60 @@ import PropTypes from 'prop-types';
 import {
   StyleSheet,
   Text,
-  Image,
   TouchableNativeFeedback,
   TouchableOpacity,
   Platform,
   View
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
 
 export default class Button extends React.Component {
   static propTypes = {
     title: PropTypes.string,
-    image: PropTypes.any,
+    icon: PropTypes.string,
     onPress: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
-    style: PropTypes.any
+    style: PropTypes.any,
+    isHeader: PropTypes.bool
   };
 
-  getImage = () => {
-    const { image } = this.props;
-    if (image) {
-      return <Image source={image} style={styles.image} resizeMode="contain" />
+  getIcon = () => {
+    const { icon } = this.props;
+    if (icon) {
+      return <Icon name={icon} size={28} color="#FFF" />;
     }
-  }
+  };
 
   getTitle = () => {
-    const { title } = this.props;
+    const { title, icon } = this.props;
     if (title) {
-      return <Text style={styles.buttonText}>{title}</Text>
+      return (
+        <View style={styles.container}>
+          {this.getIcon()}
+          <Text
+            style={[
+              styles.buttonText
+            ]}
+          >
+            {title}
+          </Text>
+        </View>
+      );
+    } else if (icon) {
+      return (
+        <View style={styles.container}>
+          {this.getIcon()}
+        </View>
+      );
     }
-  }
+  };
 
   render() {
-    const { title, onPress, style } = this.props;
+    const { title, onPress, style, isHeader } = this.props;
 
     return (
       <TouchableOpacity onPress={onPress}>
-        <View style={[styles.button, style]}>
-          {this.getImage()}
-          {this.getTitle()}
-        </View>
+        <View style={[styles.button, isHeader ? styles.header : undefined, style]}>{this.getTitle()}</View>
       </TouchableOpacity>
     );
   }
@@ -53,20 +68,22 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     flexDirection: 'row',
     alignItems: 'center',
-    minWidth: 56,
+    minWidth: 40,
     minHeight: 40
   },
   buttonText: {
-    flex: 1,
-    padding: 18,
+    paddingLeft: 4,
     color: 'white',
-    textAlign: 'center'
   },
-  image: {
-    position: 'absolute',
-    width: 40,
-    height: 40,
-    marginLeft: 8,
-    marginRight: 8
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  header: {
+    backgroundColor: 'transparent',
+    marginRight: 7,
+    marginLeft: 7,
   }
 });

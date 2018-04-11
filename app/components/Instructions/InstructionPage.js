@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, Text, ScrollView, SafeAreaView, StatusBar } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  ScrollView,
+  SafeAreaView,
+  StatusBar
+} from 'react-native';
 import Button from '../General/Button';
 import ImagePanel from './ImagePanel';
 
@@ -12,19 +18,35 @@ export default class InstructionPage extends React.Component {
     navigation: PropTypes.any.isRequired
   };
 
+  onNextPress = () => {
+    const { next, navigation } = this.props;
+    if (next !== '') {
+      navigation.navigate(next);
+    } else {
+      navigation.goBack('LoginPage');
+    }
+  };
+
+  getTitle = () => {
+    const { next } = this.props;
+    return next !== '' ? "Next" : "Close"
+  };
+
   render() {
-    const {image, text, next, navigation} = this.props;
+    const { image, text, next, navigation } = this.props;
 
     return (
       <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
         <ImagePanel image={image} />
         <ScrollView style={styles.text}>
-        <Text>
-          {text}
-        </Text>
+          <Text>{text}</Text>
         </ScrollView>
-        <Button title="Next" style={styles.button} onPress={() => {navigation.navigate(next)}} />
+        <Button
+          title={this.getTitle()}
+          style={styles.button}
+          onPress={this.onNextPress}
+        />
       </SafeAreaView>
     );
   }

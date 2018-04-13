@@ -23,6 +23,10 @@ if (__DEV__) {
   store = createStore(RootReducer, applyMiddleware(...middleware));
 }
 
+// Fixes dependency depreciating warning
+import { YellowBox } from 'react-native';
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+
 export default class App extends React.Component {
   render() {
     return (

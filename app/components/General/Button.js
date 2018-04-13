@@ -77,8 +77,10 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     flexDirection: 'row',
     alignItems: 'center',
+    /*
     minWidth: 40,
     minHeight: 40
+    */
   },
   buttonText: {
     paddingLeft: 4,
@@ -92,11 +94,14 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: 'transparent',
-    marginRight: 7,
-    marginLeft: 7
+    marginRight: 10,
+    marginLeft: 10,
+    flex: 1
   },
   headerBack: {
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    flex: 1,
+    marginLeft: 2
   },
   headerBackText: {
     paddingLeft: 0,

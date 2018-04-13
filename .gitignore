@@ -20,4 +20,6 @@ yarn-error.log*
 .vscode/.react/debuggerWorker.js
 
 /ios/build
+/android/app/build
+/android/.gradle
 /android/build

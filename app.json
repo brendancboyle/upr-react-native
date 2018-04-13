@@ -4,5 +4,7 @@
     "slug": "upr-react-native",
     "name": "upr-react-native",
     "orientation": "portrait"
-  }
+  },
+  "name": "uprreactnative",
+  "displayName": "UPR: Remote"
 }

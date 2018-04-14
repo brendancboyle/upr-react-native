@@ -4,6 +4,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { composeWithDevTools } from 'remote-redux-devtools';
 import AppNavigation from './app/containers/AppNavigation';
 import RootReducer from './app/reducers/Index';
+import firebase from 'react-native-firebase';
 
 const middleware = [];
 let store;
@@ -25,7 +26,19 @@ if (__DEV__) {
 
 // Fixes dependency depreciating warning
 import { YellowBox } from 'react-native';
-YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+YellowBox.ignoreWarnings([
+  'Warning: isMounted(...) is deprecated',
+  'Module RCTImageLoader'
+]);
+
+firebase
+  .auth()
+  .signInAnonymouslyAndRetrieveData()
+  .then(credential => {
+    if (credential) {
+      console.log('default app user ->', credential.user.toJSON());
+    }
+  });
 
 export default class App extends React.Component {
   render() {

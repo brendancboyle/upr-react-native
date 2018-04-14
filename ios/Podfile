@@ -7,6 +7,7 @@ target 'uprreactnative' do
 
   # Pods for uprreactnative
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
 

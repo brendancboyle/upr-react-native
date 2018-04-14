@@ -3,6 +3,9 @@ import * as DeviceActions from '../app/actions/DeviceActions';
 import { store } from '../App';
 
 let onTokenRefreshListener;
+let messageListener;
+let notificationDisplayedListener;
+let notificationListener;
 
 async function AppDidStart() {
   if (!store) throw 'No store found';
@@ -45,13 +48,34 @@ async function SetUpMessaging() {
   } else {
     // user doesn't have permission
     console.log('User does not have FCM permissions');
-    RequestMessagePermissions();
+    await RequestMessagePermissions();
   }
+
+  messageListener = firebase.messaging().onMessage(message => {
+    console.log(`Recieved message - ${JSON.stringify(message)}`);
+  });
+
+  notificationDisplayedListener = firebase
+    .notifications()
+    .onNotificationDisplayed(notification => {
+      // Process your notification as required
+      // ANDROID: Remote notifications do not contain the channel ID. You will have to specify this manually if you'd like to re-display the notification.
+      console.log(`Recieved notification 1`);
+    });
+  notificationListener = firebase
+    .notifications()
+    .onNotification(notification => {
+      // Process your notification as required
+      console.log(`Recieved notification 2`);
+    });
 }
 
 async function RequestMessagePermissions() {
   console.log('Requesting FCM permission');
-  await firebase.messaging().requestPermission().catch(err => console.err(err));
+  await firebase
+    .messaging()
+    .requestPermission()
+    .catch(err => console.err(err));
 }
 
 export default { AppDidStart };

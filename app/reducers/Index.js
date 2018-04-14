@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import Token from './Token';
+import Session from './Session';
+import Device from './Device';
 
 export default combineReducers({
-  Token
+  Session,
+  Device
 });

@@ -1,10 +1,13 @@
-import { SET_TOKEN } from '../actions/TokenActions';
+import { SET_TOKEN, RESET_SESSION } from '../actions/SessionActions';
 
-const initialState = 0;
+const initialState = {};
 
 const actionsMap = {
   [SET_TOKEN](state, action) {
-    return action.token;
+    return { ...state, token: action.token};
+  },
+  [RESET_SESSION](state, action) {
+    return initialState;
   }
 };
 

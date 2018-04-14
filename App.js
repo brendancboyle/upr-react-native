@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider, connect } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { composeWithDevTools } from 'remote-redux-devtools';
+import Orientation from 'react-native-orientation';
 import AppNavigation from './app/containers/AppNavigation';
 import RootReducer from './app/reducers/Index';
 import UPRKit from './UPRKit';
@@ -34,6 +35,7 @@ YellowBox.ignoreWarnings([
 export default class App extends React.Component {
   componentDidMount() {
     UPRKit.App.AppDidStart();
+    Orientation.lockToPortrait();
   }
 
   render() {

@@ -31,7 +31,7 @@ export default class Button extends React.Component {
   };
 
   getTitle = () => {
-    const { title, icon, isHeaderBack } = this.props;
+    const { title, icon, isHeaderBack, disabled } = this.props;
     if (title) {
       return (
         <View style={styles.container}>
@@ -39,7 +39,8 @@ export default class Button extends React.Component {
           <Text
             style={[
               styles.buttonText,
-              isHeaderBack ? styles.headerBackText : undefined
+              isHeaderBack ? styles.headerBackText : undefined,
+              disabled ? styles.disabledText : undefined,
             ]}
           >
             {title}
@@ -52,15 +53,16 @@ export default class Button extends React.Component {
   };
 
   render() {
-    const { title, onPress, style, isHeader, isHeaderBack } = this.props;
+    const { title, onPress, style, isHeader, isHeaderBack, disabled } = this.props;
 
     return (
-      <TouchableOpacity onPress={onPress}>
+      <TouchableOpacity onPress={onPress} disabled={disabled}>
         <View
           style={[
             styles.button,
             isHeader ? styles.header : undefined,
             isHeaderBack ? styles.headerBack : undefined,
+            disabled ? styles.disabled : undefined,
             style
           ]}
         >
@@ -77,10 +79,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     flexDirection: 'row',
     alignItems: 'center',
-    /*
-    minWidth: 40,
-    minHeight: 40
-    */
   },
   buttonText: {
     paddingLeft: 4,
@@ -108,5 +106,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     position: 'relative',
     right: 5
-  }
+  },
+  disabled: {
+    backgroundColor: '#CCC',
+  },
+  disabledText: {
+    color: '#000',
+  },
 });

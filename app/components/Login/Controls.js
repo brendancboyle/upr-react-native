@@ -1,21 +1,55 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, Text, Image, View } from 'react-native';
 import Button from '../General/Button';
+import { SessionStates } from '../../actions/SessionActions';
 
 export default class LoginPage extends React.Component {
+  static propTypes = {
+    Session: PropTypes.object.isRequired
+  };
+
+  GetToken = () => {
+    const { Session } = this.props;
+    if (Session.token) return Session.token;
+    return '...';
+  };
+
+  GetButtonTitle = () => {
+    const { Session } = this.props;
+
+    switch (Session.state) {
+      case SessionStates.DISCONNECTED:
+        return 'Connecting...';
+        break;
+      case SessionStates.WAITING:
+        return 'Waiting...';
+        break;
+      case SessionStates.READY:
+        return 'Tap to start!';
+        break;
+    }
+    return 'Waiting...';
+  };
+
+  GetButtonDisabled = () => {
+    const { Session } = this.props;
+    return Session.state !== SessionStates.READY;
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.token}>123456</Text>
+        <Text style={styles.token}>{this.GetToken()}</Text>
         <Text style={styles.prompt}>Enter token on presenting device</Text>
         <Button
-            title="Waiting..."
-            onPress={() => {
-              console.log('Pressed!');
-            }}
-            color="#CCCCCC"
-            style={styles.button}
-          />
+          title={this.GetButtonTitle()}
+          onPress={() => {
+            console.log('Pressed!');
+          }}
+          style={styles.button}
+          disabled={this.GetButtonDisabled()}
+        />
       </View>
     );
   }
@@ -32,13 +66,15 @@ const styles = StyleSheet.create({
   prompt: {
     fontSize: 18,
     height: 30,
-    textAlign: 'center'
+    textAlign: 'center',
+    color: 'black'
   },
   token: {
     fontWeight: 'bold',
     fontSize: 38,
     height: 50,
-    textAlign: 'center'
+    textAlign: 'center',
+    color: 'black'
   },
   button: {
     margin: 15,

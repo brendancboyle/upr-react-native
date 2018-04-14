@@ -1,10 +1,14 @@
-import { SET_TOKEN, RESET_SESSION } from '../actions/SessionActions';
+import {
+  SET_TOKEN,
+  RESET_SESSION,
+  SessionStates
+} from '../actions/SessionActions';
 
-const initialState = {};
+const initialState = { state: SessionStates.DISCONNECTED };
 
 const actionsMap = {
   [SET_TOKEN](state, action) {
-    return { ...state, token: action.token};
+    return { ...state, token: action.token };
   },
   [RESET_SESSION](state, action) {
     return initialState;

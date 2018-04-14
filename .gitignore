@@ -20,6 +20,8 @@ yarn-error.log*
 .vscode/.react/debuggerWorker.js
 
 /ios/build
+/ios/Pods
 /android/app/build
 /android/.gradle
 /android/build
+ios/uprreactnative.xcworkspace/xcuserdata/brendancboyle.xcuserdatad/UserInterfaceState.xcuserstate

@@ -1517,7 +1517,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.universalpresenterremote.uprreactnative;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbztech.universalpresenterremote.upr;
 				PRODUCT_NAME = uprreactnative;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1543,7 +1543,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.universalpresenterremote.uprreactnative;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbztech.universalpresenterremote.upr;
 				PRODUCT_NAME = uprreactnative;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

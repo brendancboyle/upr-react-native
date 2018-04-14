@@ -15,57 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "1043757631999-mohd0kvi5l677g7d12kggdkgmrqsi2b3.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.dbztech.universalpresenterremote.upr",
-            "certificate_hash": "199806822e7948ad8ab51e8d994bf0c3feecf114"
-          }
-        },
-        {
-          "client_id": "1043757631999-8dpcrhrc6la7mkac4m1nnbpakno75iav.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCxy6EmPEkoq3t7YW4PjzCkJlUNZ4fPXrQ"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1043757631999-8dpcrhrc6la7mkac4m1nnbpakno75iav.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "1043757631999-05u5g3cjsnc00a016udvct5ui1vka08d.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.universalpresenterremote.uprreactnative"
-              }
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1043757631999:android:817c1f3dbef768de",
-        "android_client_info": {
-          "package_name": "com.universalpresenterremote.uprreactnative"
-        }
-      },
-      "oauth_client": [
-        {
           "client_id": "1043757631999-8dpcrhrc6la7mkac4m1nnbpakno75iav.apps.googleusercontent.com",
           "client_type": 3
         }

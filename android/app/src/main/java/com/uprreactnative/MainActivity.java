@@ -1,4 +1,4 @@
-package com.universalpresenterremote.uprreactnative;
+package com.dbztech.universalpresenterremote.upr;
 
 import com.facebook.react.ReactActivity;
 

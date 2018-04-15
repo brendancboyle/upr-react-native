@@ -9,10 +9,12 @@ const initialState = { state: SessionStates.DISCONNECTED };
 
 const actionsMap = {
   [SET_SESSION_TOKEN](state, action) {
-    return { ...state, token: action.token };
+    return { token: action.token, state: SessionStates.WAITING };
   },
   [SET_SESSION_STATE](state, action) {
-    if (!SessionStates[action.state]) return state
+    if (!SessionStates[action.state]) return state;
+    if (action.state === SessionStates.DISCONNECTED)
+      return { state: action.state };
     return { ...state, state: action.state };
   },
   [RESET_SESSION](state, action) {

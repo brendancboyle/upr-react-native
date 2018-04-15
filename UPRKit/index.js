@@ -1,3 +1,6 @@
 import App from './App';
+import Session from './Session';
 
-export default { App };
+export const API_ENDPOINT = 'https://universalpresenterremote.com/';
+
+export default { App, Session };

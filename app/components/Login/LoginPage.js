@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native';
 import Header from './Header';
 import Controls from './Controls';
 import Button from '../General/Button';
+import UPRKit from '../../../UPRKit';
 
 export default class LoginPage extends React.Component {
   static propTypes = {
@@ -24,9 +25,20 @@ export default class LoginPage extends React.Component {
           isHeader={true}
           icon="info"
         />
+      ),
+      headerLeft: (
+        <Button
+          onPress={() => UPRKit.Session.RequestToken()}
+          isHeader={true}
+          icon="refresh-cw"
+        />
       )
     };
   };
+
+  componentWillMount() {
+    UPRKit.Session.RequestToken();
+  }
 
   render() {
     const { Session } = this.props;

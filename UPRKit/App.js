@@ -13,6 +13,8 @@ async function AppDidStart() {
 
   await SetUpAuth();
   await SetUpMessaging();
+
+  console.log('UPRKit - Setup Complete');
 }
 
 async function SetUpAuth() {

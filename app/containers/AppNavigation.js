@@ -16,7 +16,7 @@ const LoginNavigator = StackNavigator(
     }
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'Control',
     headerMode: 'none'
   }
 );

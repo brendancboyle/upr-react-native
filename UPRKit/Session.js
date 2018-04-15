@@ -38,6 +38,10 @@ function SubscribeToSessionChanges() {
   });
 }
 
+function UnsubscribeFromSessionChanges() {
+  if (sessionChangeListener) sessionChangeListener();
+}
+
 async function QueryTempSession() {
   const Session = store.getState().Session;
   const Device = store.getState().Device;
@@ -66,12 +70,23 @@ async function QueryTempSession() {
   }
 }
 
-function UnsubscribeFromSessionChanges() {
-  if (sessionChangeListener) sessionChangeListener();
+async function SlideUp() {
+
+}
+
+async function SlideDown() {
+
+}
+
+async function PlayMedia() {
+
 }
 
 export default {
   RequestToken,
   SubscribeToSessionChanges,
-  UnsubscribeFromSessionChanges
+  UnsubscribeFromSessionChanges,
+  SlideUp,
+  SlideDown,
+  PlayMedia
 };

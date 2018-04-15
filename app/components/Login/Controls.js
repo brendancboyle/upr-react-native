@@ -45,7 +45,7 @@ export default class LoginPage extends React.Component {
         <Button
           title={this.GetButtonTitle()}
           onPress={() => {
-            console.log('Pressed!');
+            this.props.navigation.navigate('Control');
           }}
           style={styles.button}
           disabled={this.GetButtonDisabled()}

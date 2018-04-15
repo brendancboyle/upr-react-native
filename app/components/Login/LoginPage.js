@@ -46,12 +46,12 @@ export default class LoginPage extends React.Component {
   }
 
   render() {
-    const { Session } = this.props;
+    const { Session, navigation } = this.props;
     return (
       <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
         <Header />
-        <Controls Session={Session} />
+        <Controls Session={Session} navigation={navigation} />
       </SafeAreaView>
     );
   }

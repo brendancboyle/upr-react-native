@@ -37,7 +37,12 @@ export default class LoginPage extends React.Component {
   };
 
   componentWillMount() {
+    UPRKit.Session.SubscribeToSessionChanges();
     UPRKit.Session.RequestToken();
+  }
+
+  componentWillUnmount() {
+    UPRKit.Session.UnsubscribeFromSessionChanges();
   }
 
   render() {

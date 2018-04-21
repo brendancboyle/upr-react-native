@@ -54,9 +54,9 @@
 		DF7024B4B0074689A3CD8C35 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB38899E43A3488C9E8B8452 /* Ionicons.ttf */; };
 		DF71E0F17CC94C43915EA9E5 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 164781F853FD4EF58B87529A /* Octicons.ttf */; };
 		E68C46DE7606E81DDDF461EA /* libPods-uprreactnative-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 151EE84B996F6DC731B45EE6 /* libPods-uprreactnative-tvOSTests.a */; };
-		31F039AC8A3846FC877C8897 /* Batman.woff in Resources */ = {isa = PBXBuildFile; fileRef = 700113972C4C4E21B150A1FE /* Batman.woff */; };
-		7908B64FDB3441C48C6ADA62 /* SugarcubesBold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 1BF96FD217534527A9688EE5 /* SugarcubesBold.woff */; };
-		21AB2F84CFC84DC693AB0C82 /* SugarcubesRegular.woff in Resources */ = {isa = PBXBuildFile; fileRef = A22586CDD45C42178CD343B2 /* SugarcubesRegular.woff */; };
+		EBFF7B0D8355440E9DD29E47 /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25BC2AEE37AE487A87CDE822 /* Batman.ttf */; };
+		DBC3961E5A72427BB1F876CE /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CD437FC2BE482192FAD959 /* SugarcubesBold.ttf */; };
+		F00DAB4F189148A5B3ACE737 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68EF6574342B439C94197BC2 /* SugarcubesRegular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -408,6 +408,9 @@
 		700113972C4C4E21B150A1FE /* Batman.woff */ = {isa = PBXFileReference; name = "Batman.woff"; path = "../assets/fonts/Batman.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1BF96FD217534527A9688EE5 /* SugarcubesBold.woff */ = {isa = PBXFileReference; name = "SugarcubesBold.woff"; path = "../assets/fonts/SugarcubesBold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A22586CDD45C42178CD343B2 /* SugarcubesRegular.woff */ = {isa = PBXFileReference; name = "SugarcubesRegular.woff"; path = "../assets/fonts/SugarcubesRegular.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		25BC2AEE37AE487A87CDE822 /* Batman.ttf */ = {isa = PBXFileReference; name = "Batman.ttf"; path = "../assets/fonts/Batman.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F5CD437FC2BE482192FAD959 /* SugarcubesBold.ttf */ = {isa = PBXFileReference; name = "SugarcubesBold.ttf"; path = "../assets/fonts/SugarcubesBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		68EF6574342B439C94197BC2 /* SugarcubesRegular.ttf */ = {isa = PBXFileReference; name = "SugarcubesRegular.ttf"; path = "../assets/fonts/SugarcubesRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -693,6 +696,9 @@
 				700113972C4C4E21B150A1FE /* Batman.woff */,
 				1BF96FD217534527A9688EE5 /* SugarcubesBold.woff */,
 				A22586CDD45C42178CD343B2 /* SugarcubesRegular.woff */,
+				25BC2AEE37AE487A87CDE822 /* Batman.ttf */,
+				F5CD437FC2BE482192FAD959 /* SugarcubesBold.ttf */,
+				68EF6574342B439C94197BC2 /* SugarcubesRegular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1245,6 +1251,9 @@
 				31F039AC8A3846FC877C8897 /* Batman.woff in Resources */,
 				7908B64FDB3441C48C6ADA62 /* SugarcubesBold.woff in Resources */,
 				21AB2F84CFC84DC693AB0C82 /* SugarcubesRegular.woff in Resources */,
+				EBFF7B0D8355440E9DD29E47 /* Batman.ttf in Resources */,
+				DBC3961E5A72427BB1F876CE /* SugarcubesBold.ttf in Resources */,
+				F00DAB4F189148A5B3ACE737 /* SugarcubesRegular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,9 +50,9 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
-		<string>Batman.woff</string>
-		<string>SugarcubesBold.woff</string>
-		<string>SugarcubesRegular.woff</string>
+		<string>Batman.ttf</string>
+		<string>SugarcubesBold.ttf</string>
+		<string>SugarcubesRegular.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

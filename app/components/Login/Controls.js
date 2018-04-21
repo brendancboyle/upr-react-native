@@ -74,7 +74,8 @@ const styles = StyleSheet.create({
     fontSize: 38,
     height: 50,
     textAlign: 'center',
-    color: 'black'
+    color: 'black',
+    fontFamily: 'Batman'
   },
   button: {
     margin: 15,

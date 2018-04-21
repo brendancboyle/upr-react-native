@@ -1,14 +1,7 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  ScrollView,
-  SafeAreaView,
-  View,
-  StatusBar,
-  TouchableOpacity
-} from 'react-native';
+import { StyleSheet, SafeAreaView, StatusBar } from 'react-native';
 import Button from '../General/Button';
+import UPRKit from '../../../UPRKit';
 
 export default class ControlPage extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -28,9 +21,9 @@ export default class ControlPage extends React.Component {
     return (
       <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <Button title="Media" style={styles.button} />
-        <Button title="Previous" style={styles.button} />
-        <Button title="Next" style={styles.button} />
+        <Button title="Media" style={styles.button} onPress={() => UPRKit.Session.PlayMedia()} />
+        <Button title="Previous" style={styles.button} onPress={() => UPRKit.Session.SlideDown()} />
+        <Button title="Next" style={styles.button} onPress={() => UPRKit.Session.SlideUp()} />
       </SafeAreaView>
     );
   }
@@ -46,6 +39,6 @@ const styles = StyleSheet.create({
   button: {
     alignSelf: 'stretch',
     flex: 1,
-    margin: 15,
+    margin: 15
   }
 });

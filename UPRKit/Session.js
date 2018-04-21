@@ -61,11 +61,44 @@ async function QueryTempSession() {
   }
 }
 
-async function SlideUp() {}
+async function SlideUp() {
+  const Session = store.getState().Session;
 
-async function SlideDown() {}
+  await axios
+    .get(`${API_ENDPOINT}/SlideUp`, {
+      params: {
+        token: Session.token,
+        holdfor: Session.holdfor
+      }
+    })
+    .catch(err => console.error(err));
+}
 
-async function PlayMedia() {}
+async function SlideDown() {
+  const Session = store.getState().Session;
+
+  await axios
+    .get(`${API_ENDPOINT}/SlideDown`, {
+      params: {
+        token: Session.token,
+        holdfor: Session.holdfor
+      }
+    })
+    .catch(err => console.error(err));
+}
+
+async function PlayMedia() {
+  const Session = store.getState().Session;
+
+  await axios
+    .get(`${API_ENDPOINT}/PlayMedia`, {
+      params: {
+        token: Session.token,
+        holdfor: Session.holdfor
+      }
+    })
+    .catch(err => console.error(err));
+}
 
 export default {
   RequestToken,

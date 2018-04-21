@@ -4,7 +4,6 @@ import { API_ENDPOINT } from './index';
 import { store } from '../App';
 import * as SessionActions from '../app/actions/SessionActions';
 
-let sessionChangeListener;
 let previousSessionState;
 let tempSessionInterval;
 
@@ -21,31 +20,23 @@ async function RequestToken() {
 }
 
 function SubscribeToSessionChanges() {
-  previousSessionState = store.getState().Session;
-  sessionChangeListener = store.subscribe(async () => {
-    const Session = store.getState().Session;
-    if (_.isEqual(previousSessionState, Session)) return;
-
-    if (Session.state === SessionActions.SessionStates.WAITING) {
-      await QueryTempSession();
-      tempSessionInterval = setInterval(async () => {
-        await QueryTempSession();
-      }, 1500);
-    } else {
-      clearInterval(tempSessionInterval);
-    }
-
-    previousSessionState = Session;
-  });
+  tempSessionInterval = setInterval(() => {
+    QueryTempSession();
+  }, 1500);
 }
 
 function UnsubscribeFromSessionChanges() {
-  if (sessionChangeListener) sessionChangeListener();
+  if (tempSessionInterval) clearInterval(tempSessionInterval);
 }
 
 async function QueryTempSession() {
   const Session = store.getState().Session;
   const Device = store.getState().Device;
+
+  if (Session.state !== SessionActions.SessionStates.WAITING) {
+    return;
+  }
+
   const tempSessionResponse = await axios
     .get(`${API_ENDPOINT}/TempSession`, {
       params: {

@@ -71,7 +71,6 @@ const styles = StyleSheet.create({
     fontFamily: 'SugarcubesRegular'
   },
   token: {
-    fontWeight: 'bold',
     fontSize: 38,
     height: 50,
     textAlign: 'center',

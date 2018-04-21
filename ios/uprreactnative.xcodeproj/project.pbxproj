@@ -54,9 +54,9 @@
 		DF7024B4B0074689A3CD8C35 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB38899E43A3488C9E8B8452 /* Ionicons.ttf */; };
 		DF71E0F17CC94C43915EA9E5 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 164781F853FD4EF58B87529A /* Octicons.ttf */; };
 		E68C46DE7606E81DDDF461EA /* libPods-uprreactnative-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 151EE84B996F6DC731B45EE6 /* libPods-uprreactnative-tvOSTests.a */; };
-		EBFF7B0D8355440E9DD29E47 /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25BC2AEE37AE487A87CDE822 /* Batman.ttf */; };
 		DBC3961E5A72427BB1F876CE /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CD437FC2BE482192FAD959 /* SugarcubesBold.ttf */; };
 		F00DAB4F189148A5B3ACE737 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68EF6574342B439C94197BC2 /* SugarcubesRegular.ttf */; };
+		39489F1262ED4B568C9375E2 /* BatmanForeverAlternate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CDBC6B5065F4D1FA9D09113 /* BatmanForeverAlternate.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -411,6 +411,7 @@
 		25BC2AEE37AE487A87CDE822 /* Batman.ttf */ = {isa = PBXFileReference; name = "Batman.ttf"; path = "../assets/fonts/Batman.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F5CD437FC2BE482192FAD959 /* SugarcubesBold.ttf */ = {isa = PBXFileReference; name = "SugarcubesBold.ttf"; path = "../assets/fonts/SugarcubesBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		68EF6574342B439C94197BC2 /* SugarcubesRegular.ttf */ = {isa = PBXFileReference; name = "SugarcubesRegular.ttf"; path = "../assets/fonts/SugarcubesRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5CDBC6B5065F4D1FA9D09113 /* BatmanForeverAlternate.ttf */ = {isa = PBXFileReference; name = "BatmanForeverAlternate.ttf"; path = "../assets/fonts/BatmanForeverAlternate.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -699,6 +700,7 @@
 				25BC2AEE37AE487A87CDE822 /* Batman.ttf */,
 				F5CD437FC2BE482192FAD959 /* SugarcubesBold.ttf */,
 				68EF6574342B439C94197BC2 /* SugarcubesRegular.ttf */,
+				5CDBC6B5065F4D1FA9D09113 /* BatmanForeverAlternate.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1254,6 +1256,7 @@
 				EBFF7B0D8355440E9DD29E47 /* Batman.ttf in Resources */,
 				DBC3961E5A72427BB1F876CE /* SugarcubesBold.ttf in Resources */,
 				F00DAB4F189148A5B3ACE737 /* SugarcubesRegular.ttf in Resources */,
+				39489F1262ED4B568C9375E2 /* BatmanForeverAlternate.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

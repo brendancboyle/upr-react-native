@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -55,6 +54,9 @@
 		DF7024B4B0074689A3CD8C35 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB38899E43A3488C9E8B8452 /* Ionicons.ttf */; };
 		DF71E0F17CC94C43915EA9E5 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 164781F853FD4EF58B87529A /* Octicons.ttf */; };
 		E68C46DE7606E81DDDF461EA /* libPods-uprreactnative-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 151EE84B996F6DC731B45EE6 /* libPods-uprreactnative-tvOSTests.a */; };
+		31F039AC8A3846FC877C8897 /* Batman.woff in Resources */ = {isa = PBXBuildFile; fileRef = 700113972C4C4E21B150A1FE /* Batman.woff */; };
+		7908B64FDB3441C48C6ADA62 /* SugarcubesBold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 1BF96FD217534527A9688EE5 /* SugarcubesBold.woff */; };
+		21AB2F84CFC84DC693AB0C82 /* SugarcubesRegular.woff in Resources */ = {isa = PBXBuildFile; fileRef = A22586CDD45C42178CD343B2 /* SugarcubesRegular.woff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -403,6 +405,9 @@
 		D9324CD002A3441E90102E65 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		DB38899E43A3488C9E8B8452 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		F93E983E8C3A491BADA727BB /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		700113972C4C4E21B150A1FE /* Batman.woff */ = {isa = PBXFileReference; name = "Batman.woff"; path = "../assets/fonts/Batman.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1BF96FD217534527A9688EE5 /* SugarcubesBold.woff */ = {isa = PBXFileReference; name = "SugarcubesBold.woff"; path = "../assets/fonts/SugarcubesBold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A22586CDD45C42178CD343B2 /* SugarcubesRegular.woff */ = {isa = PBXFileReference; name = "SugarcubesRegular.woff"; path = "../assets/fonts/SugarcubesRegular.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -685,6 +690,9 @@
 				164781F853FD4EF58B87529A /* Octicons.ttf */,
 				9483378CC56A49B58902DFC6 /* SimpleLineIcons.ttf */,
 				8CC4AC2F939D49D8AF93B149 /* Zocial.ttf */,
+				700113972C4C4E21B150A1FE /* Batman.woff */,
+				1BF96FD217534527A9688EE5 /* SugarcubesBold.woff */,
+				A22586CDD45C42178CD343B2 /* SugarcubesRegular.woff */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1234,6 +1242,9 @@
 				CB083618DD5646028B81E0AE /* SimpleLineIcons.ttf in Resources */,
 				02A616CF58944742AE846FCB /* Zocial.ttf in Resources */,
 				B3B59FEC20819D6500573ED0 /* GoogleService-Info.plist in Resources */,
+				31F039AC8A3846FC877C8897 /* Batman.woff in Resources */,
+				7908B64FDB3441C48C6ADA62 /* SugarcubesBold.woff in Resources */,
+				21AB2F84CFC84DC693AB0C82 /* SugarcubesRegular.woff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

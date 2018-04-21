@@ -89,7 +89,9 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     paddingLeft: 4,
-    color: 'white'
+    color: 'white',
+    fontFamily: 'SugarcubesBold',
+    fontSize: 20
   },
   container: {
     flex: 1,

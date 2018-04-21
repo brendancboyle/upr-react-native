@@ -67,7 +67,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     height: 30,
     textAlign: 'center',
-    color: 'black'
+    color: 'black',
+    fontFamily: 'Sugarcubes'
   },
   token: {
     fontWeight: 'bold',
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     height: 50,
     textAlign: 'center',
     color: 'black',
-    fontFamily: 'Batman'
+    fontFamily: 'BatmanForeverAlternate'
   },
   button: {
     margin: 15,

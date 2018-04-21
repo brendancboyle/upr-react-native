@@ -63,6 +63,8 @@ const styles = StyleSheet.create({
     padding: 15
   },
   text: {
+    fontFamily: 'Sugarcubes',
+    fontSize: 15,
   },
   button: {
     margin: 15,

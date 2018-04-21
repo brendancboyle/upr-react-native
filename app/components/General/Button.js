@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   buttonText: {
-    paddingLeft: 4,
     color: 'white',
     fontFamily: 'SugarcubesBold',
     fontSize: 20

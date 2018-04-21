@@ -16,7 +16,8 @@ async function RequestToken() {
     .get(`${API_ENDPOINT}/NewSession`)
     .catch(err => console.error(err));
   const token = tokenResponse.data;
-  store.dispatch(SessionActions.SetSessionToken(token));
+  const holdfor = Math.floor(Math.random() * 900000) + 100000;
+  store.dispatch(SessionActions.SetSessionToken(token, holdfor));
 }
 
 function SubscribeToSessionChanges() {
@@ -49,13 +50,12 @@ async function QueryTempSession() {
     .get(`${API_ENDPOINT}/TempSession`, {
       params: {
         token: Session.token,
-        holdfor: Device.credential.user.uid,
+        holdfor: Session.holdfor,
         fcmtoken: Device.FCMToken
       }
     })
     .catch(err => console.error(err));
   const tempSession = tempSessionResponse.data;
-
   switch (tempSession) {
     case 0:
       await RequestToken();
@@ -70,17 +70,11 @@ async function QueryTempSession() {
   }
 }
 
-async function SlideUp() {
+async function SlideUp() {}
 
-}
+async function SlideDown() {}
 
-async function SlideDown() {
-
-}
-
-async function PlayMedia() {
-
-}
+async function PlayMedia() {}
 
 export default {
   RequestToken,

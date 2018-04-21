@@ -7,8 +7,8 @@ const WAITING = 'WAITING';
 const READY = 'READY';
 export const SessionStates = { DISCONNECTED, WAITING, READY };
 
-export function SetSessionToken(token) {
-  return { type: SET_SESSION_TOKEN, token };
+export function SetSessionToken(token, holdfor) {
+  return { type: SET_SESSION_TOKEN, token, holdfor };
 }
 
 export function SetSessionState(state) {

@@ -9,7 +9,12 @@ const initialState = { state: SessionStates.DISCONNECTED };
 
 const actionsMap = {
   [SET_SESSION_TOKEN](state, action) {
-    return { token: action.token, state: SessionStates.WAITING };
+    if (!action.token || !action.holdfor) return;
+    return {
+      token: action.token,
+      holdfor: action.holdfor,
+      state: SessionStates.WAITING
+    };
   },
   [SET_SESSION_STATE](state, action) {
     if (!SessionStates[action.state]) return state;

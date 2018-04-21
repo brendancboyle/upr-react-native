@@ -21,9 +21,9 @@ export default class ControlPage extends React.Component {
     return (
       <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <Button title="Media" style={styles.button} onPress={() => UPRKit.Session.PlayMedia()} />
-        <Button title="Previous" style={styles.button} onPress={() => UPRKit.Session.SlideDown()} />
-        <Button title="Next" style={styles.button} onPress={() => UPRKit.Session.SlideUp()} />
+        <Button title="Media" style={styles.button} textStyle={styles.buttonText} onPress={() => UPRKit.Session.PlayMedia()} />
+        <Button title="Previous" style={styles.button} textStyle={styles.buttonText} onPress={() => UPRKit.Session.SlideDown()} />
+        <Button title="Next" style={styles.button} textStyle={styles.buttonText} onPress={() => UPRKit.Session.SlideUp()} />
       </SafeAreaView>
     );
   }
@@ -39,6 +39,9 @@ const styles = StyleSheet.create({
   button: {
     alignSelf: 'stretch',
     flex: 1,
-    margin: 15
+    margin: 15,
+  },
+  buttonText: {
+    fontSize: 40
   }
 });

@@ -17,6 +17,7 @@ export default class Button extends React.Component {
     onPress: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
     style: PropTypes.any,
+    textStyle: PropTypes.any,
     isHeader: PropTypes.bool,
     isHeaderBack: PropTypes.bool
   };
@@ -31,7 +32,7 @@ export default class Button extends React.Component {
   };
 
   getTitle = () => {
-    const { title, icon, isHeaderBack, disabled } = this.props;
+    const { title, icon, isHeaderBack, disabled, textStyle } = this.props;
     if (title) {
       return (
         <View style={styles.container}>
@@ -40,7 +41,8 @@ export default class Button extends React.Component {
             style={[
               styles.buttonText,
               isHeaderBack ? styles.headerBackText : undefined,
-              disabled ? styles.disabledText : undefined
+              disabled ? styles.disabledText : undefined,
+              textStyle
             ]}
           >
             {title}

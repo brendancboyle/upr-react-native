@@ -18,11 +18,13 @@
   "jest": {
     "preset": "react-native",
     "moduleNameMapper": {
-      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$":
-        "identity-obj-proxy"
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
     }
   },
   "dependencies": {
+    "appcenter": "^1.4.0",
+    "appcenter-analytics": "^1.4.0",
+    "appcenter-crashes": "^1.4.0",
     "axios": "^0.18.0",
     "lodash": "^4.17.5",
     "prop-types": "^15.6.1",
@@ -35,6 +37,8 @@
     "redux": "^4.0.0"
   },
   "rnpm": {
-    "assets": ["./assets/fonts"]
+    "assets": [
+      "./assets/fonts"
+    ]
   }
 }

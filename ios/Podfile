@@ -1,0 +1,32 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'uprreactnative' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for uprreactnative
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Messaging'
+
+  target 'uprreactnativeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'uprreactnative-tvOS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for uprreactnative-tvOS
+
+  target 'uprreactnative-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

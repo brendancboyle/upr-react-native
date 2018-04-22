@@ -63,6 +63,9 @@ const styles = StyleSheet.create({
     padding: 15
   },
   text: {
+    color: 'black',
+    fontFamily: 'SugarcubesRegular',
+    fontSize: 17,
   },
   button: {
     margin: 15,

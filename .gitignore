@@ -18,3 +18,11 @@ yarn-error.log*
 .vscode/.react/crna-entry.map
 .vscode/.react/crna-entry.bundle
 .vscode/.react/debuggerWorker.js
+
+/ios/build
+/ios/Pods
+/android/app/build
+/android/.gradle
+/android/build
+ios/uprreactnative.xcworkspace/xcuserdata/brendancboyle.xcuserdatad/UserInterfaceState.xcuserstate
+android/app/local.properties

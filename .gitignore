@@ -27,3 +27,4 @@ yarn-error.log*
 ios/uprreactnative.xcworkspace/xcuserdata/brendancboyle.xcuserdatad/UserInterfaceState.xcuserstate
 android/app/local.properties
 android/.idea/
+android/local.properties

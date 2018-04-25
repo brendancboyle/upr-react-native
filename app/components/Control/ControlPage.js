@@ -20,7 +20,7 @@ export default class ControlPage extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="light-content" backgroundColor="#330033" />
         <Button title="Media" style={styles.button} textStyle={styles.buttonText} onPress={() => UPRKit.Session.PlayMedia()} />
         <Button title="Previous" style={styles.button} textStyle={styles.buttonText} onPress={() => UPRKit.Session.SlideDown()} />
         <Button title="Next" style={styles.button} textStyle={styles.buttonText} onPress={() => UPRKit.Session.SlideUp()} />

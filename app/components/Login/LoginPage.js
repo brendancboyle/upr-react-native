@@ -49,7 +49,7 @@ export default class LoginPage extends React.Component {
     const { Session, navigation } = this.props;
     return (
       <SafeAreaView style={styles.container}>
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="light-content" backgroundColor="#330033" />
         <Header />
         <Controls Session={Session} navigation={navigation} />
       </SafeAreaView>

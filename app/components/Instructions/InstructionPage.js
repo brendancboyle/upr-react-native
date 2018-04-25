@@ -37,7 +37,7 @@ export default class InstructionPage extends React.Component {
 
     return (
       <SafeAreaView style={styles.container}>
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="light-content" backgroundColor="#330033" />
         <ImagePanel image={image} />
         <ScrollView style={styles.textScrollContainer}>
           <Text style={styles.text}>{text}</Text>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, Image, View } from 'react-native';
-import Logo from './Logo-Outline-Colored.png';
+import Logo from './Icon.png';
 import Banner from './Banner.png';
 
 export default class LoginPage extends React.Component {

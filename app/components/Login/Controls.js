@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, Image, View } from 'react-native';
+import firebase from 'react-native-firebase';
 import Button from '../General/Button';
 import { SessionStates } from '../../actions/SessionActions';
 
@@ -45,6 +46,7 @@ export default class LoginPage extends React.Component {
         <Button
           title={this.GetButtonTitle()}
           onPress={() => {
+            firebase.analytics().logEvent('start_presentation', {});
             this.props.navigation.navigate('Control');
           }}
           style={styles.button}

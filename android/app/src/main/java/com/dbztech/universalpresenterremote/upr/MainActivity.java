@@ -1,8 +1,19 @@
 package com.dbztech.universalpresenterremote.upr;
 
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getResources().getBoolean(R.bool.portrait_only)) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+    }
 
     /**
      * Returns the name of the main component registered from JavaScript.

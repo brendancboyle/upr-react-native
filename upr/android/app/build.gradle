@@ -102,11 +102,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.upr"
+        applicationId "com.dbztech.universalpresenterremote.upr"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode 16
+        versionName "4.1.0"
     }
     splits {
         abi {

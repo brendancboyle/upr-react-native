@@ -1,4 +1,4 @@
-package com.upr;
+package com.dbztech.universalpresenterremote.upr;
 
 import android.app.Application;
 

@@ -1,0 +1,3 @@
+rootProject.name = 'upr'
+
+include ':app'

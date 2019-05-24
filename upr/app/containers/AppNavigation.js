@@ -17,7 +17,16 @@ const LoginNavigator = createStackNavigator(
   },
   {
     initialRouteName: 'Login',
-    headerMode: 'none'
+    
+    defaultNavigationOptions: {
+      headerTitleStyle: {
+        marginLeft: 0
+      },
+      headerStyle: {
+        backgroundColor: '#4b2c4f'
+      },
+      headerTintColor: '#fff'
+    }
   }
 );
 
@@ -35,7 +44,16 @@ const InstructionNavigator = createStackNavigator(
   },
   {
     initialRouteName: 'Instruction1',
-    headerMode: 'none'
+    //headerMode: 'none'
+    defaultNavigationOptions: {
+      headerTitleStyle: {
+        marginLeft: 0
+      },
+      headerStyle: {
+        backgroundColor: '#4b2c4f'
+      },
+      headerTintColor: '#fff'
+    }
   }
 );
 
@@ -51,15 +69,7 @@ const AppNavigator = createStackNavigator(
   {
     initialRouteName: 'LoginStack',
     mode: 'modal',
-    navigationOptions: {
-      headerTitleStyle: {
-        marginLeft: 0
-      },
-      headerStyle: {
-        backgroundColor: '#4b2c4f'
-      },
-      headerTintColor: '#fff'
-    }
+    headerMode: 'none'
   }
 );
 

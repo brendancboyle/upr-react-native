@@ -58,6 +58,9 @@
 		9F3E2644DE594A3E98FF7F07 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A569D7306D404382A025C702 /* Zocial.ttf */; };
 		A2C4F188B9C9473F916056F9 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E83593C16B4D98A441779C /* libRNGestureHandler.a */; };
 		A36A031AAD124DC18AD2A8E8 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C668CA14EEE5467DAF82CD94 /* libRNGestureHandler-tvOS.a */; };
+		C0C7A10337534764A401B14B /* BatmanForeverAlternate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB51CBD543E748F5862AF931 /* BatmanForeverAlternate.ttf */; };
+		D515C751DDC54457AE6A4836 /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07E7DF44CC434455B30A02BB /* SugarcubesBold.ttf */; };
+		67BD0F3825494EB896E6FA52 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84DC6707C9304509A8569EC0 /* SugarcubesRegular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -386,6 +389,9 @@
 		02A0838A3F024C5E955F3367 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		B4E83593C16B4D98A441779C /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		C668CA14EEE5467DAF82CD94 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; name = "libRNGestureHandler-tvOS.a"; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		CB51CBD543E748F5862AF931 /* BatmanForeverAlternate.ttf */ = {isa = PBXFileReference; name = "BatmanForeverAlternate.ttf"; path = "../app/assets/fonts/BatmanForeverAlternate.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		07E7DF44CC434455B30A02BB /* SugarcubesBold.ttf */ = {isa = PBXFileReference; name = "SugarcubesBold.ttf"; path = "../app/assets/fonts/SugarcubesBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		84DC6707C9304509A8569EC0 /* SugarcubesRegular.ttf */ = {isa = PBXFileReference; name = "SugarcubesRegular.ttf"; path = "../app/assets/fonts/SugarcubesRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -675,6 +681,9 @@
 				DF56F615C49C40C1890B9629 /* Octicons.ttf */,
 				9533DD7057AF4668BE0FC514 /* SimpleLineIcons.ttf */,
 				A569D7306D404382A025C702 /* Zocial.ttf */,
+				CB51CBD543E748F5862AF931 /* BatmanForeverAlternate.ttf */,
+				07E7DF44CC434455B30A02BB /* SugarcubesBold.ttf */,
+				84DC6707C9304509A8569EC0 /* SugarcubesRegular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1141,6 +1150,9 @@
 				1FF1077DB656463EABDC6FD2 /* Octicons.ttf in Resources */,
 				7EF7BE800F9944ADA6FF56D6 /* SimpleLineIcons.ttf in Resources */,
 				9F3E2644DE594A3E98FF7F07 /* Zocial.ttf in Resources */,
+				C0C7A10337534764A401B14B /* BatmanForeverAlternate.ttf in Resources */,
+				D515C751DDC54457AE6A4836 /* SugarcubesBold.ttf in Resources */,
+				67BD0F3825494EB896E6FA52 /* SugarcubesRegular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

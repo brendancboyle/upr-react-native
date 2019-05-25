@@ -1,4 +1,4 @@
-//import firebase from 'react-native-firebase';
+import firebase from 'react-native-firebase';
 import * as DeviceActions from '../../actions/DeviceActions';
 import { store } from '../../../App';
 
@@ -18,15 +18,13 @@ async function AppDidStart() {
 }
 
 async function SetUpAuth() {
-  /*
-  const credential = await firebase.auth().signInAnonymouslyAndRetrieveData();
+  const credential = await firebase.auth().signInAnonymously();
   if (credential) {
     console.log('default app user ->', credential.user.toJSON());
     store.dispatch(DeviceActions.SetCredential(credential));
   } else {
     console.error('no credential');
   }
-  */
 }
 
 async function SetUpMessaging() {

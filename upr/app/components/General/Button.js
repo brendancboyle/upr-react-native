@@ -102,14 +102,17 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: 'transparent',
-    marginRight: 10,
-    marginLeft: 10,
+    paddingRight: 15,
+    paddingLeft: 15,
+    paddingTop: 5,
+    paddingBottom: 5,
     flex: 1
   },
   headerBack: {
     backgroundColor: 'transparent',
-    flex: 1,
-    marginLeft: 2
+    paddingRight: 15,
+    paddingLeft: 10,
+    flex: 1
   },
   headerBackText: {
     paddingLeft: 0,

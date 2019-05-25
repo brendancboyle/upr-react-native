@@ -20,7 +20,7 @@ const LoginNavigator = createStackNavigator(
     
     defaultNavigationOptions: {
       headerTitleStyle: {
-        marginLeft: 0
+        //marginLeft: 0
       },
       headerStyle: {
         backgroundColor: '#4b2c4f'
@@ -47,7 +47,7 @@ const InstructionNavigator = createStackNavigator(
     //headerMode: 'none'
     defaultNavigationOptions: {
       headerTitleStyle: {
-        marginLeft: 0
+        //marginLeft: 0
       },
       headerStyle: {
         backgroundColor: '#4b2c4f'

@@ -28,7 +28,6 @@ async function SetUpAuth() {
 }
 
 async function SetUpMessaging() {
-  /*
   onTokenRefreshListener = firebase.messaging().onTokenRefresh(fcmToken => {
     console.log('token generated ->', fcmToken);
     store.dispatch(DeviceActions.SetFCMToken(fcmToken));
@@ -71,17 +70,14 @@ async function SetUpMessaging() {
       // Process your notification as required
       console.log(`Recieved notification 2`);
     });
-    */
 }
 
 async function RequestMessagePermissions() {
-  /*
   console.log('Requesting FCM permission');
   await firebase
     .messaging()
     .requestPermission()
     .catch(err => console.err(err));
-    */
 }
 
 export default { AppDidStart };

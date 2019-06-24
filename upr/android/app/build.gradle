@@ -120,8 +120,8 @@ android {
         applicationId "com.dbztech.universalpresenterremote.upr"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 16
-        versionName "4.1.0"
+        versionCode 17
+        versionName "4.2.0"
     }
     splits {
         abi {
